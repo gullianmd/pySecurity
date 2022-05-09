@@ -6,6 +6,7 @@ import uuid
 import urllib.request
 import ftplib
 import time
+import os
 
 # REVISA SI HAY CONEXION A INTERNET
 
@@ -47,3 +48,6 @@ file = open(nombre_fichero,'rb')
 session.storbinary('STOR '+nombre_fichero, file)    
 file.close()                                   
 session.quit()
+
+# BORRAR FOTO
+os.remove(nombre_fichero) 
